@@ -36,11 +36,9 @@ which goes before in the triangle, eg. hide helper class
     box-sizing: border-box;
 }
 
-/* html {
-    font: .85rem 'Roboto Slab', serif;
-    line-height: 2em;
-    color: #00515D;
-} */
+html {
+    color: gray;
+}
 
 /*--------------------------------------------------------------
    4.0 - ELEMENTS
@@ -48,7 +46,8 @@ which goes before in the triangle, eg. hide helper class
 
 h1,
 h2,
-h3 {
+h3,
+header > div:last-child {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -56,6 +55,15 @@ h3 {
 
 h1 {
     text-align: center;
+}
+
+h2 {
+    color: lightgray;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    margin: 2em 0 0 0;
 }
 
 /*--------------------------------------------------------------
@@ -261,9 +269,72 @@ h1 {
    6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
-/* ----- HERO ----- */
+header > div:last-child a,
+main  a {
+    font-weight: 500;
+    font-size: .9rem;
+    letter-spacing: 0;
+    background-color: #4E9374;
+    border-radius: 6em;
+    padding: .5em 1.2em;
+}
 
-body > header {
+header > div:last-child a:hover,
+main  a:hover {
+    background-color: #1D6D49;
+}
+
+main > div:first-child > p:first-child,
+#about main > div p {
+    font-size: 1.5rem;
+    font-family: 'EB Garamod', serif;
+    font-weight: 200;
+    line-height: 2rem;
+}
+
+main p,
+#about main > section:last-child li {
+    font-size: 1rem;
+    font-family: 'EB Garamond', serif;
+    font-weight: 200;
+    line-height: 1.8rem;
+}
+
+header > div:last-child,
+#about h1,
+#take-action h1 {
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: .2rem;
+    padding-bottom: 2.8em;
+}
+
+#about header > div:last-child,
+#take-action header > div:last-child {
+    padding-bottom: 0;
+}
+
+#about h1,
+#take-action h1 {
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+    #about h1,
+    #take-action h1 {
+        font-size: 5rem;
+        letter-spacing: .3rem;
+        padding-bottom: 3em;
+}
+}
+
+
+/* ----- HOME ----- */
+
+#home > header {
     background: url("../img/man-viewing-sunrise.jpg") no-repeat center;
     -moz-backround-size: cover;
     -webkit-background-size: cover;
@@ -273,6 +344,255 @@ body > header {
     width: 100vw;
 }
 
+header {
+    text-align: center;
+}
+
+header > div:first-child nav a:hover {
+    border-bottom: .1em solid #fff;
+}
+
+header > div:first-child a {
+    padding: .5em;
+}
+
+header > div:first-child li:last-child a:hover {
+    color:#4E9374;
+    background-color: #fff;
+    padding: .5em 1.2em;
+    border-radius: 6em;
+}
+
+header > div:last-child span {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 2.3rem;
+    text-transform: lowercase;
+    letter-spacing: .1rem;
+}
+
+header > div:last-child p {
+    margin: 0;
+}
+
+#home main {
+    text-align: center;
+}
+
+main > div:first-child {
+    margin-top: 3em;
+}
+
+main > div:nth-child(2) > section:first-child > div:first-child {
+    background: url("../img/sunrays-on-mountain.jpg") no-repeat center;
+    -moz-backround-size: contain;
+    -webkit-background-size: contain;
+    -o-background-size: contain;
+    -ms-background-size: contain;
+    background-size: contain;
+    padding: 10em;
+    margin-top: 3em;
+}
+
+main > div:nth-child(2) > section:last-child > div:first-child {
+    background: url("../img/forest-trail.jpg") no-repeat center;
+    -moz-backround-size: contain;
+    -webkit-background-size: contain;
+    -o-background-size: contain;
+    -ms-background-size: contain;
+    background-size: contain;
+    padding: 10em;
+    margin-top: 3em;
+}
+
+main p {
+    margin-bottom: 2em;
+}
+
+main > div:nth-child(2) {
+    margin-bottom: 3em;
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1em;
+    }
+
+    header > div:last-child {
+        font-size: 5rem;
+        letter-spacing: .3rem;
+        padding-bottom: .6em;
+    }
+
+    header > div:last-child span {
+        font-size: 3.5rem;
+    }
+
+    main > div:first-child {
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    main > div:nth-child(2) > section:first-child > div:first-child {
+        -moz-backround-size: contain;
+        -webkit-background-size: contain;
+        -o-background-size: contain;
+        -ms-background-size: contain;
+        background-size: contain;
+    }
+    
+    main > div:nth-child(2) > section:last-child > div:first-child {
+        -moz-backround-size: contain;
+        -webkit-background-size: contain;
+        -o-background-size: contain;
+        -ms-background-size: contain;
+        background-size: contain;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header > div:last-child {
+        padding-bottom: 2.3em;
+    }
+}
+
+/* ----- ABOUT ----- */
+
+#about > header {
+    background: url("../img/sunrays-on-mountain.jpg") no-repeat center;
+    -moz-backround-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    width: 100vw;
+}
+
+#about main li {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    color: #1D6D49;
+    font-size: .8rem;
+}
+
+#about main a {
+    color: lightgray;
+    background-color: transparent;
+    font-style: normal;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+#about main nav {
+    background-color: #fff;
+    position: fixed;
+    text-align: center;
+}
+
+#about main > div {
+    margin-top: 5em;
+}
+
+#about main > div p {
+    text-align: center;
+    margin: 2em 0 2.5em 0
+}
+
+#about h2 {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+#about main p {
+    margin: 0;
+}
+
+blockquote {
+    border-top: .1em solid lightgray;
+    border-bottom: .1em solid lightgray;
+    margin: 0;
+    text-align: center;
+    margin: 2.5em 0 2.5em 0;
+}
+
+blockquote > footer {
+    background-color: transparent;
+}
+
+#about main > section:last-child li {
+    color: gray;
+    font-style: normal;
+    text-align: left;
+}
+
+#about main > section:last-child li {
+    background: url("../img/tree.svg") no-repeat;
+    list-style-type: none;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+#about main > section:last-child ul {
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    header img {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #about h1,
+    #take-action h1 {
+        font-size: 5rem;
+        letter-spacing: .3rem;
+        padding-bottom: 3em;
+    }
+
+    #about main nav {
+        text-align: left;
+    }
+
+    #about main a {
+        padding-left: 0;
+    }
+
+    #about main > div p {
+        text-align: left;
+    }
+}
+
+
+/* ----- TAKE ACTION ----- */
+
+#take-action > header {
+    background: url("../img/forest-trail.jpg") no-repeat center;
+    -moz-backround-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    width: 100vw;
+}
+
+#take-action main {
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+#take-action p {
+    margin: 0 0 2em 0;
+}
+
 /* ----- NAV ----- */
 
 li {
@@ -280,14 +600,45 @@ li {
     display: inline;
 }
 
-ul {
+#home ul,
+header ul
+#about main > nav ul {
     text-align: center;
+    padding-left: 0;
 }
 
 a {
     text-decoration: none;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* ----- FOOTER ----- */
+
+footer {
+    margin-top: 4em;
+    background-color: #4E9374;
+    justify-content: center;
+    margin: 0;
+}
+
+footer address {
+    background-color: #1D6D49;
+    width: 100vw;
+    text-align: center;
+}
+
+address a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+footer .fa-brands {
+    font-size: 1.3rem;
 }
 
 /*--------------------------------------------------------------
