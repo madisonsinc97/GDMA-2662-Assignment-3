@@ -499,6 +499,18 @@ main > div:nth-child(2) {
     main > div:first-child {
         margin-left: calc(100% * 2 / 12);
     }
+
+    #home main > div:last-child > section:first-child {
+        margin-left: calc(100% * 1 / 12);
+    }
+
+    #home main > div:last-child > section:last-child {
+        margin-right: calc(100% * 1 / 12);
+    }
+
+    #sustainability {
+        padding-top: 2em;
+    }
 }
 
 /* ----- ABOUT ----- */
@@ -623,8 +635,8 @@ blockquote > footer {
     #take-action h1 {
         font-size: 5rem;
         letter-spacing: .3rem;
-        padding-bottom: 3em;
-        padding-top: 1.5em;
+        padding-bottom: 2.5em;
+        padding-top: .5em;
     }
 
     #about main nav ul {
